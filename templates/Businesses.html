@@ -14,8 +14,6 @@
 <link type="text/css" rel="stylesheet" href="../static/bootstrap.css">
     
 <link type="text/css" rel="stylesheet" href="../static/custom.css"/>
-    
-
 
   </head>
 
@@ -24,11 +22,11 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">We Connect</a>
+        <a class="navbar-brand" href="index.htm">We Connect</a>
+        <a class="btn btn-primary" href="index.html">Home</a>
         <a class="btn btn-primary" href="log in.html">Log in</a>
         <a class="btn btn-primary" href="register.html">User register</a>
         <a class="btn btn-primary" href="BsRegister.html">Business register</a>
-        <a class="btn btn-primary" href="Businesses.html">Businesses</a>
       </div>
     </nav>
 
@@ -40,7 +38,7 @@
           
       </div>
       
-      <div class="container">
+<div class="container">
 	<div class="row">
         <div class="col-md-6">
             <div id="custom-search-input">
@@ -50,25 +48,49 @@
                         <button class="btn btn-info btn-lg" type="button">
                             search business
                         </button>
+                    
                 </div>
             </div>
         </div>
 	</div>
 </div>
+   
+      <br>
       
- <br>     
 <div class="container">
     <div class="jumbotron">
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <h3>Mama Mboga kiosk</h3>
             <p>This is a business that deals with all green grocer products.</p>
             <h3> Location</h3>
             <p> we are located at kindaruma road.</p>
             <h3>business category</h3>
             <p> this business is in the category of green groceries</p>
+            <button onclick="myFunction()">Delete</button>
+            <button onclick="myFunction()">Update</button>
+            <button onclick="myFunction()">Add a review</button>
+            <button onclick="myFunction()">Check all reviews</button>
+            <div class="form-group">
+                <label for="BsLocation">filter business by  Location:</label>
+                <select class="form-control" id="BsLocation">
+                    <option>Nairobi</option>
+                    <option>Mombasa</option>
+                    <option>Kisumu</option>
+                    <option>machakos</option>
+                    <option>Thika</option>
+                </select>
             
+            <label for="BsType">Filter business by category:</label>
+                <select class="form-control" id="BsType">
+                    <option></option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            
+            </div>
         </div>
 
     </div>
