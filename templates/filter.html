@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+    <link type="text/css" rel="stylesheet" href="../static/custom.css"/>
+</head>
+
+
+<div class="header">
+
+    <div class="navbar">
+        <ul>
+            <li> <a class="nav-link" href="index.html">Home</a> </li>
+            <li> <a class="nav-link" href="login.html">Login</a> </li>
+            <li> <a class="nav-link" href="register.html">Register business</a> </li>
+            <li> <a class="nav-link" href="review.html">Write-review</a> </li>
+            <li> <a class="nav-link" href="searchForBusiness.html">Search</a> </li>
+            <li> <a class="nav-link" href="update.html">Update</a> </li>
+            <li> <a class="nav-link" href="getAllReviews.html">All reviews</a> </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+    <!------ Include the above in your HEAD tag ---------->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="input-group">
+                    <div class="input-group-btn search-panel">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span id="search_concept">Filter by</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#contains">Contains</a></li>
+                            <li><a href="#its_equal">It's equal</a></li>
+                            <li><a href="#greather_than">Greather than ></a></li>
+                            <li><a href="#less_than">Less than < </a></li>
+                            <li class="divider"></li>
+                            <li><a href="#all">Anything</a></li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="search_param" value="all" id="search_param">
+                    <input type="text" class="form-control" name="x" placeholder="Search term...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-success" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script type="application/ecmascript">
+
+    $(document).ready(function(e){
+        $('.search-panel .dropdown-menu').find('a').click(function(e) {
+            e.preventDefault();
+            var param = $(this).attr("href").replace("#","");
+            var concept = $(this).text();
+            $('.search-panel span#search_concept').text(concept);
+            $('.input-group #search_param').val(param);
+        });
+    });
+</script>
+
+    <style>
+
+        body{
+            margin-top:120px;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+</div>
+</body>
+</html>
